@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --background-color: #1d2129;
+    --title-color: #8a3ab9;
+    --input-color: #ffffff;
+    --button-color: #8a3ab9;
+    --button-hover-color: #6d2d96;
+    --item-color: #ffffff;
+    --item-hover-color: #e0e0e0;
+    --item-check: #b3b3b3;
+    --item-check-span: #666666;
+    --button-del: #ed4242;
+    --button-del-hover: #d91e18;
+}
+
+body {
+    background: var(--background-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
+
+h1 {
+    font-weight: 900;
+    color: var(--title-color);
+    text-align: center;
+}
+
+form {
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 60px;
+    margin: 30px auto;
+    margin-bottom: 60px;
+}
+
+input {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: var(--input-color);
+    border: none;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+button.add {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--button-color);
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 62px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+button.add:hover {
+    color: white;
+    background: var(--button-hover-color);
+}
+
+.listaTarefas {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--item-color);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: var(--item-hover-color);
+}
+
+.item span {
+    width: 100%;
+    color: white;
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-align: start;
+}
+
+.item span:hover {
+    color: black;
+}
+
+.item.completo {
+    display: flex;
+    justify-content: space-between;
+    background: var(--item-check);
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+    opacity: 0.4;
+}
+
+.item.completo span {
+    width: 100%;
+    color: var(--item-check-span);
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+    text-align: start;
+}
+
+button.del {
+    color: var(--button-del);
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.del:hover {
+    background: var(--button-del-hover);
+    border: none;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+button.deleteAll {
+    border: 1px solid var(--button-del-hover);
+    background: none;
+    padding: 15px;
+    color: #ff004c;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+button.deleteAll:hover {
+    background: var(--button-del-hover);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.icone-central {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        width: 100%;
+    }
+
+    .listaTarefas {
+        width: 100%;
+    }
+}
