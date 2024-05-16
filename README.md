@@ -1,2 +1,2 @@
 ﻿# React + Vite
-<img src="./src/assets/listaPronta.png" width="700px" />
+<img src="src/assets/ListaPronta.png" width="1000px" />
